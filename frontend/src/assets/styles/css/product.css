@@ -15,10 +15,7 @@
 
 .content-header::before {
   content: "";
-  background: linear-gradient(
-    rgba(255, 255, 255, 0.63) 0,
-    rgba(255, 255, 255, 0) 100%
-  );
+  background: linear-gradient(rgba(255, 255, 255, 0.63) 0, rgba(255, 255, 255, 0) 100%);
   width: 100%;
   height: 400px;
   position: absolute;
@@ -46,157 +43,15 @@
 }
 
 .content-header-box-right {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-}
-
-.burger {
   width: 20px;
   height: 20px;
-}
-
-.shopping {
-  width: 20px;
-  height: 20px;
-  position: relative;
-  text-align: right;
-}
-
-.quantity {
-  background: red;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: #fff;
-  position: absolute;
-  top: -5px;
-  left: 80%;
-  padding: 3px 10px;
-}
-
-/* Card */
-.card {
-  position: fixed;
-  top: 0;
-  left: 100%;
-  width: 500px;
-  background-color: #fff;
-  height: 100vh;
-  transition: 0.5s;
-  z-index: 3;
-}
-.active .card {
-  left: calc(100% - 530px);
-}
-.active .container {
-  transform: translateX(-200px);
-}
-.card h1 {
-  color: #c8a27a;
-  font-weight: 100;
-  margin: 0;
-  padding: 0 20px;
-  height: 80px;
-  display: flex;
-  align-items: center;
-}
-.card .checkOut {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-}
-.card .checkOut div {
-  border-style: solid;
-  border-width: 0.5px;
-  background-color: #c8a27a;
-  width: 100%;
-  height: 70px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-weight: bold;
-  cursor: pointer;
-}
-
-.card .checkOut div:nth-child(2) {
-  background-color: #fff;
-  color: #333;
-}
-.card .checkOut .text-total {
-  background-color: #fff;
-  color: #333;
-}
-.listCard li {
-  display: grid;
-  grid-template-columns: 100px repeat(3, 1fr);
-  color: #333;
-  row-gap: 10px;
-}
-.listCard li div {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.listCard li img {
-  width: 90%;
-}
-.listCard li button {
-  background-color: #fff5;
-  border: none;
-}
-.listCard .count {
-  margin: 0 10px;
-}
-/* End */
-
-.listCard {
-  padding: 16px;
-}
-
-.listCard-item {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.listCard-item-img img {
-  width: 100px;
-  height: 100px;
-  object-fit: contain;
-}
-
-.listCard-item-quantity {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-}
-
-.listCard-item-quantity button {
-  width: 30px;
-  height: 30px;
-  font-size: 20px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
 }
 
 .content-header-title {
   color: #242424;
   font-weight: 400;
   line-height: 1.875;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   text-align: center;
   font-size: 44px;
 }
@@ -209,9 +64,7 @@
   color: #242424;
   font-weight: 400;
   line-height: 1.875;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   text-align: center;
   font-size: 36px;
 }
@@ -237,7 +90,7 @@
   text-align: center;
 }
 .content-body-list div:hover {
-  background-color: #c8a27a;
+  background-color: #C8A27A;
   color: #242424;
 }
 
@@ -245,25 +98,23 @@
   color: #8d8d8d;
   font-weight: 400;
   line-height: 1.875;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   text-align: center;
   font-size: 22px;
 }
 
 .content-body-item {
-  /* display: flex;
+  display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-items: center; */
+  align-items: center;
 }
 
 .content-body-item-product {
-  /* display: flex;
+  display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center; */
+  align-items: center;
 }
 
 .product-item {
@@ -275,9 +126,7 @@
   color: #242424;
   font-weight: 400;
   line-height: 1.875;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   font-size: 16px;
   padding-top: 16px;
   text-align: center;
@@ -294,11 +143,9 @@
   font-size: 20px;
 }
 
-input[type="text"] {
+input[type=text] {
   width: 30%;
   -webkit-transition: width 0.15s ease-in-out;
   transition: width 0.15s ease-in-out;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-} /*# sourceMappingURL=product.css.map */
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+}/*# sourceMappingURL=product.css.map */

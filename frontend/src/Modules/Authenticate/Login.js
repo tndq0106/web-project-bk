@@ -52,67 +52,69 @@ const LoginPage = () => {
   };
 
   return (
-    <div className="form-box">
-      <h1>Login</h1>
-      <Form
-        form={form}
-        onFinish={onFinishSignIn}
-        onFieldsChange={onFieldsChangeSignUp}
-        className="login w-100"
-      >
-        <div className="row">
-          <Form.Item
-            label={false}
-            required
-            name={"username"}
-            rules={[
-              {
-                required: true,
-                message: "Please enter your Email!",
-              },
-              {
-                max: 250,
-                message: "Your email must be limited to 250",
-              },
-              {
-                type: "email",
-                message: "Please enter correct format of email!",
-              },
-            ]}
-          >
-            <div className="field">
-              <Input placeholder="Email" />
-            </div>
-          </Form.Item>
-
-          <Form.Item
-            label={false}
-            required
-            name={"password"}
-            rules={[
-              {
-                required: true,
-                message: "Please enter your Password!",
-              },
-            ]}
-          >
-            <div className="field">
-              <Input.Password placeholder="Password" />
-            </div>
-          </Form.Item>
-        </div>
-        <Button
-          className="btn"
-          htmlType="submit"
-          disabled={isDisable}
-          loading={loading}
+    <div className="login-body">
+      <div className="form-box">
+        <h1>Sign in</h1>
+        <Form
+          form={form}
+          onFinish={onFinishSignIn}
+          onFieldsChange={onFieldsChangeSignUp}
+          className="login w-100"
         >
-          Sign in
-        </Button>
-      </Form>
-      <p>
-        Don't have an account? <Link to={"/register"}>Signup</Link>
-      </p>
+          <div className="row">
+            <Form.Item
+              label={false}
+              required
+              name={"username"}
+              rules={[
+                {
+                  required: true,
+                  message: "Please enter your email!",
+                },
+                {
+                  max: 250,
+                  message: "Your email must be limited to 250",
+                },
+                {
+                  type: "email",
+                  message: "Please enter correct format of email!",
+                },
+              ]}
+            >
+              <div className="field">
+                <Input placeholder="Email" />
+              </div>
+            </Form.Item>
+
+            <Form.Item
+              label={false}
+              required
+              name={"password"}
+              rules={[
+                {
+                  required: true,
+                  message: "Please enter your password!",
+                },
+              ]}
+            >
+              <div className="field">
+                <Input.Password placeholder="Password" />
+              </div>
+            </Form.Item>
+          </div>
+          <Button
+            className="button"
+            htmlType="submit"
+            //disabled={isDisable}
+            loading={loading}
+          >
+            Sign in
+          </Button>
+        </Form>
+        <p>
+          Don't have an account? <Link to={"/register"}>Signup</Link>
+        </p>
+      </div>
     </div>
   );
 };

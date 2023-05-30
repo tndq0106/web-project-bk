@@ -5,7 +5,6 @@
   box-sizing: border-box;
   vertical-align: baseline;
   font-family: "M PLUS Rounded 1c", sans-serif;
-  
 }
 
 h2 {
@@ -65,6 +64,20 @@ a:hover {
   width: 450px;
 }
 
+.login-body {
+  background: url("../../img/hero-bg1.jpg") repeat 0;
+  background-position: center center;
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+}
+.login-body p {
+  font-size: small;
+}
 
 .form-box {
   display: flex;
@@ -77,6 +90,32 @@ a:hover {
   vertical-align: middle;
   gap: 20px;
   background-color: rgba(255, 255, 255, 0.5);
+}
+.form-box .button {
+  background-color: #c8a27a;
+  padding: 20px 165px;
+  color: white;
+  border: 1px solid white;
+  width: max-content;
+  text-transform: uppercase;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  cursor: pointer;
+  transition: transform 0.3s;
+  text-align: center;
+  width: 100%;
+  text-transform: capitalize;
+  font-weight: 500;
+  cursor: pointer;
+  border: 1px solid transparent;
+  transition: border-color 0.3s ease-in-out;
+}
+.form-box .button:hover {
+  border: white 1px;
+  box-shadow: 0 0 8px 0 #ffffff;
+  color: white;
+  font-weight: 600;
 }
 
 form {
@@ -97,29 +136,8 @@ form .field {
   flex-direction: column;
   align-items: baseline;
   gap: 8px;
-  width: 400px;
 }
 form .field input {
   width: 100%;
   padding: 5px;
-  height: 48px;
-  border-radius: 10px;
-  font-size: 18px;
-}
-form input[type="submit"] {
-  background-color: #c8a27a;
-  padding: 10px 165px;
-  color: white;
-  border: 1px solid white;
-  width: max-content;
-  text-transform: uppercase;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  cursor: pointer;
-  transition: transform 0.3s;
-  text-align: center;
-  width: 100%;
-  text-transform: capitalize;
-  font-weight: 500;
-} /*# sourceMappingURL=login.css.map */
+}/*# sourceMappingURL=login.css.map */

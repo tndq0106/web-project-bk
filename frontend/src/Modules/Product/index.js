@@ -210,7 +210,7 @@ const Product = () => {
             </div>
             <div
               className="content-body-list-item"
-              onClick={() => fetchGetListProducts("Flabored-Coffee")}
+              onClick={() => fetchGetListProducts("Flavored-Coffee")}
             >
               Flabored Coffee
             </div>

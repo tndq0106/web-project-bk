@@ -23,6 +23,7 @@ import Img13 from "../../assets/img/mug.jpg";
 import Img14 from "../../assets/img/bag.jpg";
 import Img15 from "../../assets/img/honey-lemonade.jpg";
 import Img16 from "../../assets/img/caramel-macciato.jpg";
+import Img17 from "../../assets/img/story.jpg"
 
 //burger-bar
 import { Link } from "react-router-dom";
@@ -105,7 +106,7 @@ const Home = () => {
                 </button>
               </div>
               <div className="col">
-                <img src="../img/story.jpg" alt="" />
+                <img src={Img17} alt="" />
               </div>
             </div>
             <div className="products section">
@@ -164,7 +165,8 @@ const Home = () => {
                 <img src={Img11} alt="" />
               </div>
             </div>
-            <div className="merchandise section">
+            
+            {/* <div className="merchandise section">
               <div className="content-col">
                 <h2 className="section-heading">Merchandise</h2>
                 <div className="row">
@@ -187,7 +189,7 @@ const Home = () => {
                   </button>
                 </div>
               </div>
-            </div>
+            </div> */}
           </div>
           <div className="promo section">
             <div className="wrapper">
