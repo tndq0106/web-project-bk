@@ -205,7 +205,7 @@ const RegisterPage = () => {
           </Button>
         </Form>
         <p>
-          Already have an account? <Link to={"/login"}>Login</Link>
+          Already have an account? <Link to={"/login"} style={{ fontWeight: 'bold' }}>Login</Link>
         </p>
       </div>
     </div>

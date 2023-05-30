@@ -112,7 +112,7 @@ const LoginPage = () => {
           </Button>
         </Form>
         <p>
-          Don't have an account? <Link to={"/register"}>Signup</Link>
+          Don't have an account? <Link to={"/register"} style={{ fontWeight: 'bold' }}>Signup</Link>
         </p>
       </div>
     </div>
