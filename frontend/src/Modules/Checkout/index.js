@@ -64,10 +64,10 @@ const Checkout = () => {
     const hasValues = form.getFieldsValue();
     setIsDisable(
       hasErrors ||
-        !hasValues?.username ||
-        !hasValues?.fullName ||
-        !hasValues?.phone ||
-        !hasValues?.address
+      !hasValues?.username ||
+      !hasValues?.fullName ||
+      !hasValues?.phone ||
+      !hasValues?.address
     );
   };
 

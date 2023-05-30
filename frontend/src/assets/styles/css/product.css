@@ -15,10 +15,8 @@
 
 .content-header::before {
   content: "";
-  background: linear-gradient(
-    rgba(255, 255, 255, 0.63) 0,
-    rgba(255, 255, 255, 0) 100%
-  );
+  background: linear-gradient(rgba(255, 255, 255, 0.63) 0,
+      rgba(255, 255, 255, 0) 100%);
   width: 100%;
   height: 400px;
   position: absolute;
@@ -56,6 +54,7 @@
 .burger {
   width: 20px;
   height: 20px;
+  cursor: pointer;
 }
 
 .shopping {
@@ -88,13 +87,17 @@
   height: 100vh;
   transition: 0.5s;
   z-index: 3;
+
 }
+
 .active .card {
-  left: calc(100% - 530px);
+  left: calc(100% - 500px);
 }
+
 .active .container {
   transform: translateX(-200px);
 }
+
 .card h1 {
   color: #c8a27a;
   font-weight: 100;
@@ -104,6 +107,7 @@
   display: flex;
   align-items: center;
 }
+
 .card .checkOut {
   position: absolute;
   bottom: 0;
@@ -111,9 +115,9 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
 }
+
 .card .checkOut div {
-  border-style: solid;
-  border-width: 0.5px;
+  border: 0.5px solid #5e5e5e;
   background-color: #c8a27a;
   width: 100%;
   height: 70px;
@@ -128,31 +132,38 @@
   background-color: #fff;
   color: #333;
 }
+
 .card .checkOut .text-total {
   background-color: #fff;
   color: #333;
 }
+
 .listCard li {
   display: grid;
   grid-template-columns: 100px repeat(3, 1fr);
   color: #333;
   row-gap: 10px;
 }
+
 .listCard li div {
   display: flex;
   justify-content: center;
   align-items: center;
 }
+
 .listCard li img {
   width: 90%;
 }
+
 .listCard li button {
   background-color: #fff5;
   border: none;
 }
+
 .listCard .count {
   margin: 0 10px;
 }
+
 /* End */
 
 .listCard {
@@ -229,6 +240,7 @@
   gap: 40px;
   margin-bottom: 20px;
 }
+
 .content-body-list div {
   margin-top: 20px;
   display: block;
@@ -236,6 +248,7 @@
   text-decoration: none;
   text-align: center;
 }
+
 .content-body-list div:hover {
   background-color: #c8a27a;
   color: #242424;
@@ -250,31 +263,36 @@
     sans-serif;
   text-align: center;
   font-size: 22px;
+  cursor: pointer;
 }
 
 .content-body-item {
-  /* display: flex;
+  display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-items: center; */
+  align-items: center;
 }
 
 .content-body-item-product {
-  /* display: flex;
+  /* border: 1px solid #997b5c; */
+  border-radius: 5px;
+  padding: 0;
+  display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center; */
+  align-items: center;
 }
 
 .product-item {
   width: 330px;
   height: 330px;
+  /* align-self: center; */
 }
 
 .product-item-title {
   color: #242424;
-  font-weight: 400;
-  line-height: 1.875;
+  font-weight: bold;
+  line-height: 0.5;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
@@ -285,6 +303,8 @@
 
 .product-item-content {
   text-align: center;
+  line-height: 0.7;
+
 }
 
 #searchbar {
@@ -301,4 +321,6 @@ input[type="text"] {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
-} /*# sourceMappingURL=product.css.map */
+}
+
+/*# sourceMappingURL=product.css.map */

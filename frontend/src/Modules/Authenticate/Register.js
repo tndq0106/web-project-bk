@@ -50,12 +50,12 @@ const RegisterPage = () => {
     const hasValues = form.getFieldsValue();
     setIsDisableSignUp(
       hasErrors ||
-        !hasValues?.username ||
-        !hasValues?.password ||
-        !hasValues?.confirmPassword ||
-        !hasValues?.fullName ||
-        !hasValues?.phone ||
-        !hasValues?.address
+      !hasValues?.username ||
+      !hasValues?.password ||
+      !hasValues?.confirmPassword ||
+      !hasValues?.fullName ||
+      !hasValues?.phone ||
+      !hasValues?.address
     );
   };
 

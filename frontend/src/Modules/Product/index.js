@@ -76,7 +76,7 @@ const Product = () => {
       if (!x[i].innerHTML.toLowerCase().includes(input)) {
         x[i].style.display = "none";
       } else {
-        x[i].style.display = "block";
+        x[i].style.display = "flex";
       }
     }
   }
@@ -169,7 +169,7 @@ const Product = () => {
               <i className="fa-solid fa-bars" onClick={() => openNav()}></i>
             </div>
             <div className="shopping">
-              <div>
+              <div style={{ cursor: "pointer" }}>
                 <CartIcon />
               </div>
               <span className="quantity">{dataCart?.length}</span>
@@ -247,7 +247,7 @@ const Product = () => {
                           <a
                             href="#"
                             className="fa-solid fa-cart-shopping"
-                            style={{ color: "black" }}
+                            style={{ color: "#c8a27a", fontSize: "20px" }}
                           ></a>
                         </div>
                       </div>
