@@ -26,21 +26,15 @@
     gap: 20px;
     background-color: rgba(255,255,255,0.5);
     .button{
-        @include base.button(white, variables.$accent, 20px 165px);
-            text-align: center;
-            width: 100%;
-            text-transform: capitalize;
-            font-weight: 500;
-            cursor: pointer;
-            border: 1px solid transparent;
-            transition: border-color 0.3s ease-in-out;
-            &:hover{
-                //background-color: lighten(variables.$accent, 20%);
-                border: white 1px;
-                box-shadow: 0 0 8px 0 #ffffff;
-                color: white;
-                font-weight: 600;
-            }
+        cursor: pointer;
+        border: 1px solid transparent;
+        transition: border-color 0.3s ease-in-out;
+        &:hover, :active{
+            //background-color: lighten(variables.$accent, 20%);
+            border: white 1px;
+            box-shadow: 0 0 8px 0 #ffffff;
+            color: white !important;
+        }
     }
 }
 form{

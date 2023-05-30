@@ -23,7 +23,6 @@ a {
   text-decoration: none;
   color: #242424;
 }
-
 a:hover {
   color: #3e3e3e;
 }
@@ -46,25 +45,21 @@ a:hover {
   margin: 60px 0;
   position: relative;
 }
-
 .section .col {
   height: max-content;
   margin: auto;
   padding: 10px;
 }
-
 .section .content-col {
   display: flex;
   flex-direction: column;
   gap: 40px;
 }
-
 .section .content-row {
   display: flex;
   flex-direction: row;
   gap: 40px;
 }
-
 .section img {
   width: 450px;
 }
@@ -79,18 +74,14 @@ a:hover {
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: center;
   cursor: pointer;
   transition: transform 0.3s;
   gap: 25px;
 }
-
 .section-button-arrow-dark p {
   font-size: 12px;
   font-weight: 500;
-  transform: translate(0, 50%);
 }
-
 .section-button-arrow-dark:hover {
   transform: translate(0, -6px);
 }
@@ -126,12 +117,6 @@ a:hover {
   font-size: 12px;
   font-weight: 500;
 }
-
-.section-button-center-dark a {
-  color: white;
-}
-
-
 .section-button-center-dark:hover {
   transform: translate(0, -6px);
 }
@@ -152,7 +137,6 @@ a:hover {
   font-size: 12px;
   font-weight: 500;
 }
-
 .section-button-center-light:hover {
   transform: translate(0, -6px);
 }
@@ -163,48 +147,40 @@ a:hover {
   background-color: white;
   background-attachment: fixed;
 }
-
 .main .merchandise .row {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   gap: 40px;
 }
-
 .main .merchandise .row .img-container img {
   max-width: 320px;
 }
-
 .main .merchandise .row-button {
   display: flex;
   flex-direction: row;
   justify-content: center;
   gap: 20px;
 }
-
 .main .products .carousel-viewport .carousel-slide {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  gap: 40px;
+  gap: 50px;
+  font-size: 12px;
 }
-
 .main .products .carousel-viewport .carousel-slide .product {
   text-align: center;
 }
-
 .main .products .carousel-viewport .carousel-slide .product img {
   width: 100%;
 }
-
 .main .products .carousel-viewport .carousel-slide .product .product-name {
   text-transform: capitalize;
 }
-
 .main .products button {
   margin: auto;
 }
-
 .main .promo {
   width: 100%;
   padding: 80px;
@@ -212,66 +188,52 @@ a:hover {
   background-repeat: no-repeat;
   background-size: cover;
 }
-
 .main .promo .wrapper {
   display: flex;
   flex-direction: row;
   gap: 30px;
 }
-
 .main .promo .promo-item {
   background-color: white;
   padding: 4px;
   display: flex;
   flex-direction: row;
 }
-
 .main .promo .promo-item .col {
   height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
-
 .main .promo .promo-item .col img {
   width: 100%;
 }
-
 .main .promo .promo-item .col .title {
   font-size: 18px;
   font-weight: 500;
 }
-
 .main .promo .promo-item .col .row {
   display: flex;
   flex-direction: row;
   align-items: baseline;
   justify-content: space-between;
 }
-
-.main .promo .promo-item .col p,
-.main .promo .promo-item .col a {
+.main .promo .promo-item .col p, .main .promo .promo-item .col a {
   color: #6d6d6d;
   font-size: 14px;
 }
-
 .main .promo .promo-item .col a:hover {
   color: black;
 }
-
 .main .instagram .wrapper {
   margin: 0 auto;
   text-align: center;
 }
-
 .main .instagram .wrapper img {
   width: 48px;
   margin: 0 0 10px;
 }
-
 .main .instagram .wrapper .section-heading {
   font-size: 24px;
   letter-spacing: 0.1em;
-}
-
-/*# sourceMappingURL=main.css.map */
+}/*# sourceMappingURL=main.css.map */

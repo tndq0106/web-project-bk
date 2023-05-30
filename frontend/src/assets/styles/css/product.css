@@ -1,4 +1,124 @@
 * {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  box-sizing: border-box;
+  vertical-align: baseline;
+  font-family: "M PLUS Rounded 1c", sans-serif;
+}
+
+h2 {
+  font-size: 24px;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+p {
+  font-family: "Nunito Sans", sans-serif;
+  font-weight: 300;
+  font-size: 18px;
+}
+
+a {
+  text-decoration: none;
+  color: #242424;
+}
+a:hover {
+  color: #3e3e3e;
+}
+
+.wrapper {
+  max-width: 1100px;
+  width: 100%;
+  margin: auto auto;
+  padding: 15px;
+  position: relative;
+}
+
+.section-heading {
+  font-size: 36px;
+}
+
+.section {
+  display: flex;
+  flex-direction: row;
+  margin: 60px 0;
+  position: relative;
+}
+.section .col {
+  height: max-content;
+  margin: auto;
+  padding: 10px;
+}
+.section .content-col {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+.section .content-row {
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+}
+.section img {
+  width: 450px;
+}
+
+.header {
+  background: url("../../img/hero-bg1.jpg") repeat 0;
+  background-position: center center;
+  background-size: cover;
+  height: 100vh;
+}
+.header .nav {
+  justify-content: space-between;
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+}
+.header .nav i {
+  font-size: 24px;
+  color: #242424;
+}
+.header .nav i:hover {
+  cursor: pointer;
+  color: #3e3e3e;
+}
+.header .image-container {
+  height: fit-content;
+  position: relative;
+}
+.header .image-container .couvee-text {
+  position: relative;
+  margin: auto;
+}
+.header .image-container .couvee-text img {
+  width: 750px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 150px;
+  bottom: 0;
+  margin: auto;
+  z-index: 0;
+}
+.header .image-container .image-hands-container {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  max-width: 530px;
+  margin: auto;
+}
+.header .image-container .image-hands-container .left-hand {
+  position: absolute;
+  z-index: 2;
+}
+.header .image-container .image-hands-container .right-hand {
+  position: absolute;
+  z-index: 1;
+}
+
+* {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -10,223 +130,66 @@
   left: 0;
   z-index: -2;
   width: 100%;
-  height: 550px;
+  height: 420px;
 }
 
 .content-header {
-  height: 350px;
+  background-image: url(https://www.couvee.co.id/wp-content/uploads/2020/01/81D7C1B6-7763-411D-816B-742009C14740.jpeg);
+  background-position: center center;
+  background-size: cover;
+  height: 50vh;
+  z-index: -1;
 }
-
 .content-header::before {
   content: "";
-  background: linear-gradient(rgba(255, 255, 255, 0.63) 0,
-      rgba(255, 255, 255, 0) 100%);
+  background: linear-gradient(rgba(255, 255, 255, 0.63) 0, rgba(255, 255, 255, 0) 100%);
   width: 100%;
   height: 400px;
   position: absolute;
   top: 0;
   left: 0;
-  z-index: -1;
+  z-index: 0;
 }
-
-.content-header-box {
-  display: flex;
-  flex-direction: row;
+.content-header .nav {
   justify-content: space-between;
   align-items: center;
-  padding-top: 10px;
-  position: relative;
-  z-index: 1;
-  width: 70%;
-  margin: 0 auto;
-  padding: 20px 0 50px 0;
-}
-
-.content-header-box-left {
-  width: 20px;
-  height: 20px;
-}
-
-.content-header-box-right {
   display: flex;
   flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
 }
-
-.burger {
-  width: 24px;
-  height: 24px;
+.content-header .nav i {
   font-size: 24px;
+  color: #242424;
+}
+.content-header .nav i:hover {
   cursor: pointer;
+  color: #3e3e3e;
 }
-
-.shopping {
-  width: 20px;
-  height: 20px;
-  position: relative;
-  text-align: right;
-}
-
-.quantity {
-  background: red;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: #fff;
-  position: absolute;
-  top: -5px;
-  left: 80%;
-  padding: 3px 10px;
-}
-
-/* Card */
-.card {
-  position: fixed;
-  top: 0;
-  left: 100%;
-  width: 500px;
-  background-color: #fff;
-  height: 100vh;
-  transition: 0.5s;
-  z-index: 3;
-}
-
-.active .card {
-  left: calc(100% - 500px);
-}
-
-.active .container {
-  transform: translateX(-200px);
-}
-
-.card h1 {
-  color: #c8a27a;
-  font-weight: 100;
-  margin: 0;
-  padding: 0 20px;
-  height: 80px;
-  display: flex;
-  align-items: center;
-}
-
-.card .checkOut {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-}
-
-.card .checkOut div {
-  border: 0.5px solid #5e5e5e;
-  background-color: #c8a27a;
-  width: 100%;
-  height: 70px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-weight: bold;
-  cursor: pointer;
-}
-
-.card .checkOut div:nth-child(2) {
-  background-color: #fff;
-  color: #333;
-}
-
-.card .checkOut .text-total {
-  background-color: #fff;
-  color: #333;
-}
-
-.listCard li {
-  display: grid;
-  grid-template-columns: 100px repeat(3, 1fr);
-  color: #333;
-  row-gap: 10px;
-}
-
-.listCard li div {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.listCard li img {
-  width: 90%;
-}
-
-.listCard li button {
-  background-color: #fff5;
-  border: none;
-}
-
-.listCard .count {
-  margin: 0 10px;
-}
-
-/* End */
-
-.listCard {
-  padding: 16px;
-}
-
-.listCard-item {
+.content-header .nav .end {
+  width: 300px;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
   align-items: center;
-}
-
-.listCard-item-img img {
-  width: 100px;
-  height: 100px;
-  object-fit: contain;
-}
-
-.listCard-item-quantity {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-}
-
-.listCard-item-quantity button {
-  width: 30px;
-  height: 30px;
-  font-size: 20px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  justify-content: space-evenly;
 }
 
 .content-header-title {
   color: #242424;
   font-weight: 400;
   line-height: 1.875;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
+  font-family: "M PLUS Rounded 1c", sans-serif;
   text-align: center;
   font-size: 44px;
 }
 
 .content-body {
-  margin-top: 250px;
+  margin-top: 40px;
 }
 
 .content-body-title {
   color: #242424;
   font-weight: 400;
   line-height: 1.875;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   text-align: center;
   font-size: 36px;
 }
@@ -244,7 +207,6 @@
   gap: 40px;
   margin-bottom: 20px;
 }
-
 .content-body-list div {
   margin-top: 20px;
   display: block;
@@ -252,9 +214,8 @@
   text-decoration: none;
   text-align: center;
 }
-
 .content-body-list div:hover {
-  background-color: #c8a27a;
+  background-color: #C8A27A;
   color: #242424;
 }
 
@@ -262,12 +223,10 @@
   color: #8d8d8d;
   font-weight: 400;
   line-height: 1.875;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
+  font-family: "M PLUS Rounded 1c", sans-serif;
   text-align: center;
   font-size: 22px;
-  cursor: pointer;
+  cursor: default;
 }
 
 .content-body-item {
@@ -278,7 +237,6 @@
 }
 
 .content-body-item-product {
-  /* border: 1px solid black; */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -288,16 +246,13 @@
 .product-item {
   width: 330px;
   height: 330px;
-  /* align-self: center; */
 }
 
 .product-item-title {
   color: #242424;
-  font-weight: bold;
-  line-height: 1;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
+  font-weight: 400;
+  line-height: 1.875;
+  font-family: "M PLUS Rounded 1c", sans-serif;
   font-size: 16px;
   padding-top: 16px;
   text-align: center;
@@ -305,7 +260,6 @@
 
 .product-item-content {
   text-align: center;
-  line-height: 0.7;
 }
 
 #searchbar {
@@ -315,13 +269,154 @@
   font-size: 20px;
 }
 
-input[type="text"] {
+input[type=text] {
   width: 30%;
   -webkit-transition: width 0.15s ease-in-out;
   transition: width 0.15s ease-in-out;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
 }
 
-/*# sourceMappingURL=product.css.map */
+.shopping {
+  position: relative;
+}
+.shopping .quantity {
+  font-size: small;
+  background: red;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  position: absolute;
+  top: -15px;
+  left: 50%;
+  padding: 3px 10px;
+}
+
+/* Card */
+.card {
+  position: fixed;
+  top: 0;
+  left: 100%;
+  width: 500px;
+  background-color: #fff;
+  height: 100vh;
+  transition: 0.5s;
+  z-index: 3;
+}
+
+.active .card {
+  overflow-y: scroll;
+  left: calc(100% - 500px);
+}
+.active .card h1 {
+  color: #c8a27a;
+  font-weight: 100;
+  margin: 0;
+  padding: 0 20px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+}
+.active .card .checkOut {
+  font-size: 20px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 20px;
+  cursor: default;
+  align-items: center;
+}
+.active .card .checkOut .checkoutButton {
+  background-color: #c8a27a;
+  padding: 20px 30px;
+  color: white;
+  border: 1px solid white;
+  width: max-content;
+  text-transform: uppercase;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  cursor: pointer;
+  transition: transform 0.3s;
+  font-size: 20px;
+  cursor: pointer;
+  text-transform: none;
+}
+.active .card .closeShopping {
+  position: absolute;
+  top: -10px;
+  right: 45px;
+  font-size: 60px;
+  cursor: pointer;
+}
+.active .container {
+  transform: translateX(-200px);
+}
+
+.listCard {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.listCard li {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  color: #333;
+}
+.listCard li .start {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+}
+.listCard li div {
+  width: max-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.listCard li img {
+  width: 90px;
+}
+.listCard li button {
+  background-color: rgba(255, 255, 255, 0.3333333333);
+  border: none;
+}
+
+.listCard {
+  padding: 16px;
+}
+.listCard .count {
+  margin: 0 10px;
+}
+
+.listCard-item {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.listCard-item img {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+}
+
+.listCard-item-quantity {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.listCard-item-quantity button {
+  width: 30px;
+  height: 30px;
+  font-size: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}/*# sourceMappingURL=product.css.map */

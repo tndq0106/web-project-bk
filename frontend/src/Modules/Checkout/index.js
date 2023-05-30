@@ -1,4 +1,4 @@
-import "./style.css";
+import "../../assets/styles/css/checkout.css";
 
 import React, { useState } from "react";
 import axios from "axios";
@@ -88,135 +88,139 @@ const Checkout = () => {
 
   return (
     <React.Fragment>
-      <div className="container">
-        <h1>Checkout Cart</h1>
-
-        <div id="cart-items">
-          {dataCart?.map((item, index) => {
-            return (
-              <div className="row p-3" key={`${index}-${item?._id}`}>
-                <div className="col-3">
-                  <img
-                    style={{ width: 100, height: 100, objectFit: "contain" }}
-                    src={item?.image}
-                    alt=""
-                  />
-                </div>
-                <div className="col-9">
-                  <div className="d-flex flex-column justify-content-center align-items-start h-100">
-                    <h5>
-                      {item?.name} - x{item?.quantity}
-                    </h5>
-                    <p>${item?.totalPrice}</p>
-                  </div>
-                </div>
-              </div>
-            );
-          })}
-        </div>
-
-        <div className="user-details">
-          <h2>User Details</h2>
-          <Form
-            form={form}
-            onFinish={onFinish}
-            onFieldsChange={onFieldsChange}
-            className="w-100"
-          >
-            <div className="row">
-              <Form.Item
-                className="col-12 w-100"
-                label={false}
-                required
-                name={"fullName"}
-                rules={[
-                  {
-                    required: true,
-                    message: "Please enter your Name!",
-                  },
-                ]}
+      <div className="checkout-body">
+      <div className="wrapper">
+        <h1>Check Out</h1>
+        <div className="container">
+          <div className="user-details">
+              <h2>User Details</h2>
+              <Form
+                form={form}
+                onFinish={onFinish}
+                onFieldsChange={onFieldsChange}
+                className="w-100"
               >
-                <div className="field">
-                  <Input placeholder="Name" />
-                </div>
-              </Form.Item>
+                <div className="row">
+                  <Form.Item
+                    className="col-12 w-100"
+                    label={false}
+                    required
+                    name={"fullName"}
+                    rules={[
+                      {
+                        required: true,
+                        message: "Please enter your Name!",
+                      },
+                    ]}
+                  >
+                    <div className="field">
+                      <Input placeholder="Name" />
+                    </div>
+                  </Form.Item>
 
-              <Form.Item
-                label={false}
-                required
-                name={"username"}
-                rules={[
-                  {
-                    required: true,
-                    message: "Please enter your Email!",
-                  },
-                  {
-                    max: 250,
-                    message: "Your email must be limited to 250",
-                  },
-                  {
-                    type: "email",
-                    message: "Please enter correct format of email!",
-                  },
-                ]}
-              >
-                <div className="field">
-                  <Input placeholder="Email" />
-                </div>
-              </Form.Item>
+                  <Form.Item
+                    label={false}
+                    required
+                    name={"username"}
+                    rules={[
+                      {
+                        required: true,
+                        message: "Please enter your Email!",
+                      },
+                      {
+                        max: 250,
+                        message: "Your email must be limited to 250",
+                      },
+                      {
+                        type: "email",
+                        message: "Please enter correct format of email!",
+                      },
+                    ]}
+                  >
+                    <div className="field">
+                      <Input placeholder="Email" />
+                    </div>
+                  </Form.Item>
 
-              <Form.Item
-                label={false}
-                required
-                name={"phone"}
-                rules={[
-                  {
-                    required: true,
-                    message: "Please enter your Phone!",
-                  },
-                  {
-                    pattern: new RegExp(phoneRegex),
-                    message: "Please enter your correct format of phone",
-                  },
-                ]}
-              >
-                <div className="field">
-                  <Input placeholder="Phone" />
-                </div>
-              </Form.Item>
+                  <Form.Item
+                    label={false}
+                    required
+                    name={"phone"}
+                    rules={[
+                      {
+                        required: true,
+                        message: "Please enter your Phone!",
+                      },
+                      {
+                        pattern: new RegExp(phoneRegex),
+                        message: "Please enter your correct format of phone",
+                      },
+                    ]}
+                  >
+                    <div className="field">
+                      <Input placeholder="Phone" />
+                    </div>
+                  </Form.Item>
 
-              <Form.Item
-                label={false}
-                required
-                name={"address"}
-                rules={[
-                  {
-                    required: true,
-                    message: "Please enter your Address!",
-                  },
-                ]}
-              >
-                <div className="field">
-                  <Input placeholder="Address" />
+                  <Form.Item
+                    label={false}
+                    required
+                    name={"address"}
+                    rules={[
+                      {
+                        required: true,
+                        message: "Please enter your Address!",
+                      },
+                    ]}
+                  >
+                    <div className="field">
+                      <Input placeholder="Address" />
+                    </div>
+                  </Form.Item>
                 </div>
-              </Form.Item>
+
+                <Button
+                  style={{background: "#c8a27a"}}
+                  className="button"
+                  htmlType="submit"
+                  disabled={isDisable}
+                  loading={loading}
+                >
+                  Confirm to Buy
+                </Button>
+              </Form>
             </div>
-
-            <Button
-              className=""
-              htmlType="submit"
-              disabled={isDisable}
-              loading={loading}
-            >
-              Confirm to Buy
-            </Button>
-          </Form>
+            <div className="column">
+              <div id="cart-items">
+              {dataCart?.map((item, index) => {
+                return (
+                  <div className="item" key={`${index}-${item?._id}`}>
+                    <div className="img">
+                      <img
+                        style={{ width: 80, height: 80, objectFit: "contain" }}
+                        src={item?.image}
+                        alt=""
+                      />
+                    </div>
+                    <div className="text">
+                        <h5>
+                          {item?.name} - x{item?.quantity}
+                        </h5>
+                        <p>${item?.totalPrice}</p>
+                    </div>
+                  </div>
+                );
+              })}
+              </div>
+            <div className="cart-summary">
+              <div id="total-amount">Total: ${handleTotalMoney()}</div>
+            </div>
+            </div>
+          
         </div>
 
-        <div className="cart-summary">
-          <h2>Summary</h2>
-          <div id="total-amount">Total: ${handleTotalMoney()}</div>
-        </div>
+
+      </div>
       </div>
     </React.Fragment>
   );

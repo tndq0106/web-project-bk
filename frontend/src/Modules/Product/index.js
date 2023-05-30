@@ -4,6 +4,7 @@ import "../../assets/styles/css/base.css";
 import "../../assets/styles/css/main.css";
 import "../../assets/styles/css/footer.css";
 import "../../assets/styles/css/overlay-menu.css";
+import Img1 from "../../assets/img/logo-text.png";
 
 import React, { useEffect, useState } from "react";
 import axios from "axios";
@@ -14,7 +15,7 @@ import { Link } from "react-router-dom";
 // @svg
 import { CartIcon } from "../../assets/svg";
 import { useSelector, useDispatch } from "react-redux";
-import { addItem, deleteItem } from "../../Redux/actions/cartAction";
+import { addItem, deleteItem, clearItem } from "../../Redux/actions/cartAction";
 
 const Product = () => {
   const [loading, setLoading] = useState(false);
@@ -108,74 +109,51 @@ const Product = () => {
     }
   };
 
+
   return (
     <React.Fragment>
       <div className="content-header">
-        <img
-          src="https://www.couvee.co.id/wp-content/uploads/2020/01/81D7C1B6-7763-411D-816B-742009C14740.jpeg"
-          alt="img-background"
-          className="img-background"
-        />
-        <div className="content-header-box">
-          <div className="content-header-box-left">
-            <svg
-              className="logo-insta"
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 448 512"
-            >
-              <path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z" />
-            </svg>
-          </div>
-          <div className="content-header-box-center">
-            <img
-              src="https://www.couvee.co.id/wp-content/themes/couvee/assets/images/logo-text.png"
-              alt="img-logo"
-              style={{
-                cursor: "pointer",
-                paddingLeft: "220px",
-              }}
-            />
-          </div>
-          <div className="content-header-box-right">
-            {userInfo && Object.keys(userInfo)?.length > 0 ? (
-              <p
-                style={{
-                  cursor: "pointer",
-                  paddingTop: "20px",
-                  paddingRight: "130px",
-                }}
-                onClick={() => {
-                  localStorage.removeItem("userInfo");
-                  setTimeout(() => {
-                    window.location.href = "/login";
-                  }, 1000);
-                }}
-              >
-                Logout
-              </p>
-            ) : (
-              <p
-                style={{
-                  cursor: "pointer",
-                  paddingTop: "20px",
-                  paddingRight: "130px",
-                }}
-                onClick={() => (window.location.href = "/login")}
-              >
-                Login
-              </p>
-            )}
-            <div className="burger">
-              <i className="fa-solid fa-bars" onClick={() => openNav()}></i>
-            </div>
-            <div className="shopping">
-              <div style={{ cursor: "pointer" }}>
-                <CartIcon />
+      <div className="wrapper">
+        <div className="nav">
+          <i className="fa-brands fa-instagram"></i>
+          <img src={Img1} alt="" style={{
+                cursor: "pointer", marginLeft: "280px",
+              }} />
+          <div class="end">
+                {userInfo && Object.keys(userInfo)?.length > 0 ? (
+                  <p
+                    style={{
+                      cursor: "pointer", paddingTop: "20px"
+                    }}
+                    onClick={() => {
+                      localStorage.removeItem("userInfo");
+                      setTimeout(() => {
+                        window.location.href = "/login";
+                      }, 1000);
+                    }}
+                  >
+                    Logout
+                  </p>
+                ) : (
+                  <p
+                    style={{
+                      cursor: "pointer", paddingTop: "20px"
+                    }}
+                    onClick={() => (window.location.href = "/login")}
+                  >
+                    Login
+                  </p>
+                )}
+                <i className="fa-solid fa-bars" onClick={() => openNav()}></i>
+                <div className="shopping">
+                  <div style={{ cursor: "pointer" }}>
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <span className="quantity">{dataCart?.length}</span>
+                  </div>
+                </div>
               </div>
-              <span className="quantity">{dataCart?.length}</span>
-            </div>
-          </div>
         </div>
+      </div>
         <h1 className="content-header-title">MENU</h1>
       </div>
       <div className="content-body">
@@ -210,7 +188,7 @@ const Product = () => {
             </div>
             <div
               className="content-body-list-item"
-              onClick={() => fetchGetListProducts("Flaored-Coffee")}
+              onClick={() => fetchGetListProducts("Flavored-Coffee")}
             >
               Flavored Coffee
             </div>
@@ -320,14 +298,15 @@ const Product = () => {
       </div>
       <div className="card">
         <h1>Cart</h1>
+        <div className="closeShopping">&times;</div>
         <ul className="listCard">
           {dataCart?.map((value, index) => {
             return (
               <li key={index}>
-                <div>
+                <div className="start">
                   <img src={value.image} alt="" />
+                  <div className="product-name">{value.name}</div>
                 </div>
-                <div>{value.name}</div>
                 <div>{value.totalPrice.toLocaleString()}</div>
                 <div>
                   <button
@@ -356,15 +335,27 @@ const Product = () => {
                     +
                   </button>
                 </div>
+                  <button
+                  onClick={() => {
+                    const itemExistDelete = dataCart?.filter(
+                      (item) => item?._id === value._id
+                    );
+                    dispatch(clearItem(value));
+                    // while (
+                    //   itemExistDelete &&
+                    //   Object.keys(itemExistDelete).length > 0
+                    // ) {
+                      
+                    // } 
+                    return;
+                  }}>&times;</button>
               </li>
             );
           })}
         </ul>
         <div className="checkOut">
-          <div className="">Total</div>
-          <div className="total">{handleTotalMoney()}</div>
-          <div className="closeShopping">Close</div>
-          <div
+          <div className="">Total: ${handleTotalMoney()}</div>
+          <div className="checkoutButton"
             onClick={() => {
               if (userInfo && Object.keys(userInfo)?.length > 0) {
                 window.location.href = "checkout";
@@ -374,7 +365,7 @@ const Product = () => {
             }}
           >
             {/* <Link to="/checkout">Checkout</Link> */}
-            Checkout
+            Check Out ({dataCart?.length})
           </div>
         </div>
       </div>

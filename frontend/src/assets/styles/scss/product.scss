@@ -1,3 +1,6 @@
+@use 'header';
+@use 'base';
+@use 'variables';
 // * {
 //     box-sizing: border-box;
 //     margin: 0;
@@ -181,6 +184,11 @@
 }
 
 .content-header {
+    background-image: url(https://www.couvee.co.id/wp-content/uploads/2020/01/81D7C1B6-7763-411D-816B-742009C14740.jpeg);
+    background-position: center center;
+    background-size: cover;
+    height: 50vh;
+    z-index: -1;
     &::before {
         content: "";
         background: linear-gradient(rgba(255, 255, 255, .63) 0, rgba(255, 255, 255, 0) 100%);
@@ -189,32 +197,33 @@
         position: absolute;
         top: 0;
         left: 0;
-        z-index: -1;
+        z-index: 0;
+    }
+    .nav{  
+        justify-content: space-between;
+        align-items: center;
+        // position: fixed;
+        // width: 1100px;
+        // z-index: 100;
+        @include base.flex(row);
+        i{
+            font-size: 24px;
+            color: #242424;
+            &:hover{
+                cursor: pointer;
+                color:  lighten(#242424,10%);
+            }
+        }
+        .end{
+            width: 300px;
+            @include base.flex(row);
+            align-items: center;
+            justify-content: space-evenly;
+        }
     }
 }
 
-.content-header-box {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    padding-top: 10px;
-    position: relative;
-    z-index: 1;
-    width: 70%;
-    margin: 0 auto;
-    padding: 20px 0 50px 0;
-}
 
-.content-header-box-left {
-    width: 20px;
-    height: 20px;
-}
-
-.content-header-box-right {
-    width: 20px;
-    height: 20px;
-}
 
 .content-header-title {
     color: #242424;
@@ -226,7 +235,7 @@
 }
 
 .content-body {
-    margin-top: 250px;
+    margin-top: 40px;
 }
 
 .content-body-title {
@@ -272,6 +281,7 @@
     font-family: 'M PLUS Rounded 1c', sans-serif;
     text-align: center;
     font-size: 22px;
+    cursor: default;
 }
 
 .content-body-item {
@@ -319,5 +329,161 @@ input[type=text] {
     -webkit-transition: width 0.15s ease-in-out;
     transition: width 0.15s ease-in-out;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+}
+.shopping{
+    position: relative;
+    .quantity {
+        font-size: small;
+        background: red;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #fff;
+        position: absolute;
+        top: -15px;
+        left: 50%;
+        padding: 3px 10px;
+      }
+}
+  
+  /* Card */
+  .card {
+    position: fixed;
+    top: 0;
+    left: 100%;
+    width: 500px;
+    background-color: #fff;
+    height: 100vh;
+    transition: 0.5s;
+    z-index: 3;
+  }
+  
+  .active{
+    .card {
+        overflow-y: scroll;
+        left: calc(100% - 500px);
+        h1 {
+            color: #c8a27a;
+            font-weight: 100;
+            margin: 0;
+            padding: 0 20px;
+            height: 80px;
+            display: flex;
+            align-items: center;
+          }
+        .checkOut {
+        font-size: 20px;
+        width: 100%;
+        @include base.flex(row);
+        justify-content: space-between;
+        padding: 20px;
+        cursor:default;
+        align-items: center;
+        .checkoutButton{
+            @include base.button(white, variables.$accent, 20px 30px);
+            font-size: 20px;
+            cursor: pointer;
+            text-transform: none;
+        }
+
+        // div {
+        //     border: 0.5px solid #5e5e5e;
+        //     background-color: #c8a27a;
+        //     width: 100%;
+        //     height: 70px;
+        //     display: flex;
+        //     justify-content: center;
+        //     align-items: center;
+        //     font-weight: bold;
+        //     cursor: pointer;
+        //     &:nth-child(2) {
+        //         background-color: #fff;
+        //         color: #333;
+        //       }
+        //   }
+        //   .text-total {
+        //     background-color: #fff;
+        //     color: #333;
+        //   }
+        }
+        .closeShopping{
+            position: absolute;
+            top: -10px;
+            right: 45px;
+            font-size: 60px;
+            cursor: pointer;
+        }
+      }
+    .container {
+    transform: translateX(-200px);
+    }
+  } 
+  
+  .listCard {
+    @include base.flex(column);
+    gap: 20px;
+      li {
+      @include base.flex(row);
+      justify-content: space-between;
+      color: #333;
+      .start{
+          @include base.flex(row);
+          gap: 5px;
+          
+      }
+      div {
+          width: max-content;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+        img {
+          width: 90px;
+        }
+        button {
+          background-color: #fff5;
+          border: none;
+        }
+    }
 
 }
+
+  
+  .listCard {
+    padding: 16px;
+    .count {
+        margin: 0 10px;
+      }
+  }
+  
+  .listCard-item {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    img {
+        width: 100px;
+        height: 100px;
+        object-fit: contain;
+      }
+  }
+
+  
+  .listCard-item-quantity {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    button {
+        width: 30px;
+        height: 30px;
+        font-size: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+  }
+}
+

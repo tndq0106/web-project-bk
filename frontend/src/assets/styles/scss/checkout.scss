@@ -1,0 +1,98 @@
+@use 'base';
+@use 'variables';
+.checkout-body{
+    background: url('../../img/hero-bg1.jpg') repeat 0;
+    background-position: center center;
+    background-size: cover;
+    height: 100vh;
+    @include base.flex(column);
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    .wrapper{
+        background-color: rgba(255,255,255,0.5);
+    }
+}
+.container {
+    justify-content: space-around;
+    @include base.flex(row);
+    align-items: center;
+    margin-top: 40px;
+}
+.column {@include base.flex(column);}
+.row {@include base.flex(row);}
+
+.item{
+    @include base.flex(row);
+    gap: 10px;
+    margin-bottom: 10px;
+    .img{
+        @include base.flex(column);
+    }
+    .text{
+        @include base.flex(column);
+    }
+}
+  h1 {
+    text-align: center;
+  }
+  
+  .user-details {
+    max-width: 500px;
+    form {
+        display: grid;
+        grid-gap: 10px;
+    }
+    label {
+        font-weight: bold;
+      }
+    input[type="text"], input[type="email"], input[type="tel"], textarea {
+    width: 100%;
+    padding: 5px;
+    font-size: 16px;
+    }
+    button[type="submit"] {
+        display: block;
+        margin: 10px 0;
+        padding: 10px 20px;
+        font-size: 16px;
+        background-color: #4caf50;
+        color: #fff;
+        border: none;
+        cursor: pointer;
+        height: 48px;
+    }
+  }
+  
+  
+  .cart-summary {
+    margin-top: 20px;
+    //padding: 10px;
+    //border: 1px solid #ccc;
+  }
+  
+  #total-amount {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  
+  form .field {
+    width: unset;
+  }
+  .button{
+    @include base.button(white, variables.$accent, 10px 180px);
+    border-radius: 5px;
+    width: 100%;
+    background-color: variables.$accent;
+    border: 1px solid transparent;
+    transition: border-color 0.3s ease-in-out;
+        &:hover{
+            //background-color: lighten(variables.$accent, 20%);
+            border: white 1px;
+            box-shadow: 0 0 8px 0 #ffffff;
+            color: white;
+            font-weight: 600;
+        }
+  }

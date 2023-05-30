@@ -63,7 +63,8 @@
             .carousel-slide{
                 @include base.flex(row);
                 justify-content: space-between;
-                gap: 40px;
+                gap: 50px;
+                font-size: 12px;
                 .product{
                     img{
                         width: 100%;

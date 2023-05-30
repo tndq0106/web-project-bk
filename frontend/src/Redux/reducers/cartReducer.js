@@ -1,4 +1,4 @@
-import { ADD_ITEM, DELETE_ITEM, RESET_ITEM } from "../actionTypes/actionTypes";
+import { ADD_ITEM, DELETE_ITEM, RESET_ITEM, CLEAR_ITEM } from "../actionTypes/actionTypes";
 
 const initialState = {
   dataCart: [],
@@ -49,7 +49,15 @@ export const cartReducer = (state = initialState, action) => {
           dataCart: [...state.dataCart],
         };
       }
-
+    
+    case CLEAR_ITEM:
+      const filteredItems = state.dataCart.filter(
+        (item) => item?._id !== action.payload._id
+      );
+      return {
+        dataCart: filteredItems,
+      };
+      
     case RESET_ITEM:
       return initialState;
 

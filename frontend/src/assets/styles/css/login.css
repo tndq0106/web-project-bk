@@ -92,30 +92,14 @@ a:hover {
   background-color: rgba(255, 255, 255, 0.5);
 }
 .form-box .button {
-  background-color: #c8a27a;
-  padding: 20px 165px;
-  color: white;
-  border: 1px solid white;
-  width: max-content;
-  text-transform: uppercase;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  cursor: pointer;
-  transition: transform 0.3s;
-  text-align: center;
-  width: 100%;
-  text-transform: capitalize;
-  font-weight: 500;
   cursor: pointer;
   border: 1px solid transparent;
   transition: border-color 0.3s ease-in-out;
 }
-.form-box .button:hover {
+.form-box .button:hover, .form-box .button :active {
   border: white 1px;
   box-shadow: 0 0 8px 0 #ffffff;
-  color: white;
-  font-weight: 600;
+  color: white !important;
 }
 
 form {

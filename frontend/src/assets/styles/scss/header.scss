@@ -4,7 +4,7 @@
     background-position: center center;
     background-size: cover;
     height: 100vh;
-    .nav{
+.nav{
         justify-content: space-between;
         align-items: center;
         // position: fixed;
@@ -18,7 +18,7 @@
                 cursor: pointer;
                 color:  lighten(#242424,10%);
             }
-        } 
+            } 
     }
     .image-container{
         height:fit-content;
