@@ -1,0 +1,145 @@
+@use 'base';
+@use 'variables';
+
+.section-button-arrow-dark{
+    @include base.button(white, variables.$accent, 15px);
+    gap: 25px;
+    p{
+        font-size: 12px;
+        font-weight: 500;
+    }
+    &:hover{
+        transform: translate(0, -6px);
+    }
+}
+.section-button-arrow-light{
+    @include base.button(variables.$accent, white, 15px);
+    gap: 25px;
+    
+}
+.section-button-center-dark{
+    @include base.button(white, variables.$accent, 16px 50px);
+    text-align: center;
+    font-size: 12px;
+    font-weight: 500;
+    &:hover{
+        transform: translate(0, -6px);
+    }
+}
+.section-button-center-light{
+    @include base.button(variables.$accent, white, 16px 50px);
+    text-align: center;
+    font-size: 12px;
+    font-weight: 500;
+    &:hover{
+        transform: translate(0, -6px);
+    }
+}
+
+.main{
+    z-index: 5;
+    position: relative;
+    background-color: white;
+    background-attachment: fixed;
+    .merchandise{
+        .row{
+            @include base.flex(row);
+            justify-content: space-around;
+            gap: 40px;
+            .img-container{
+                img{
+                    max-width: 320px;
+                }
+            }
+        }
+        .row-button{
+            @include base.flex(row);
+            justify-content: center;
+            gap: 20px;
+        }
+    }
+    .products{
+        .carousel-viewport{
+            .carousel-slide{
+                @include base.flex(row);
+                justify-content: space-between;
+                gap: 40px;
+                .product{
+                    img{
+                        width: 100%;
+                    }
+                    text-align: center;
+                    .product-name{
+                        text-transform: capitalize;
+                    }
+                }
+            }
+        }
+        button{
+            margin: auto;
+        }
+    }
+    .promo{
+        width: 100%;
+        padding: 80px;
+        background-image: url("../../img/decoration-3.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        .wrapper{
+            @include base.flex(row);
+            gap: 30px;
+        }
+        .promo-item{
+            background-color: white;
+            padding: 4px;
+            @include base.flex(row);
+            .col{
+                height: 100%;
+                @include base.flex(column);
+                justify-content: space-between;
+                img{
+                    width: 100%;
+                }
+                .title{
+                    font-size: 18px;
+                    font-weight: 500;
+                }
+                .row{
+                    @include base.flex(row);
+                    align-items: baseline;
+                    justify-content: space-between;
+                }
+                p, a{
+                    color: #6d6d6d;
+                    font-size: 14px;
+                }
+                a{
+                    &:hover{
+                        color: black;
+                    }
+                }
+            }
+        }
+
+    }
+    .instagram{
+        .wrapper{
+            margin: 0 auto;
+            text-align: center;
+            
+            img{
+                width: 48px;
+                margin: 0 0 10px;
+
+            }
+            .section-heading{
+                font-size: 24px;
+                letter-spacing: .1em;
+            }
+        }
+    }
+}
+
+
+
+

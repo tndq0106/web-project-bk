@@ -1,0 +1,125 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  box-sizing: border-box;
+  vertical-align: baseline;
+  font-family: "M PLUS Rounded 1c", sans-serif;
+  
+}
+
+h2 {
+  font-size: 24px;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+p {
+  font-family: "Nunito Sans", sans-serif;
+  font-weight: 300;
+  font-size: 18px;
+}
+
+a {
+  text-decoration: none;
+  color: #242424;
+}
+a:hover {
+  color: #3e3e3e;
+}
+
+.wrapper {
+  max-width: 1100px;
+  width: 100%;
+  margin: auto auto;
+  padding: 15px;
+  position: relative;
+}
+
+.section-heading {
+  font-size: 36px;
+}
+
+.section {
+  display: flex;
+  flex-direction: row;
+  margin: 60px 0;
+  position: relative;
+}
+.section .col {
+  height: max-content;
+  margin: auto;
+  padding: 10px;
+}
+.section .content-col {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+.section .content-row {
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+}
+.section img {
+  width: 450px;
+}
+
+
+.form-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: max-content;
+  max-width: 500px;
+  padding: 40px;
+  margin: auto;
+  vertical-align: middle;
+  gap: 20px;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+form p {
+  font-size: small;
+}
+form .container {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+form .field {
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+  gap: 8px;
+  width: 400px;
+}
+form .field input {
+  width: 100%;
+  padding: 5px;
+  height: 48px;
+  border-radius: 10px;
+  font-size: 18px;
+}
+form input[type="submit"] {
+  background-color: #c8a27a;
+  padding: 10px 165px;
+  color: white;
+  border: 1px solid white;
+  width: max-content;
+  text-transform: uppercase;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  cursor: pointer;
+  transition: transform 0.3s;
+  text-align: center;
+  width: 100%;
+  text-transform: capitalize;
+  font-weight: 500;
+} /*# sourceMappingURL=login.css.map */

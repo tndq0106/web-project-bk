@@ -1,0 +1,119 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  box-sizing: border-box;
+  vertical-align: baseline;
+  font-family: "M PLUS Rounded 1c", sans-serif;
+}
+
+h2 {
+  font-size: 24px;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+p {
+  font-family: "Nunito Sans", sans-serif;
+  font-weight: 300;
+  font-size: 18px;
+}
+
+a {
+  text-decoration: none;
+  color: #242424;
+}
+a:hover {
+  color: #242424;
+}
+
+.wrapper {
+  max-width: 1100px;
+  width: 100%;
+  margin: auto auto;
+  padding: 15px;
+  position: relative;
+}
+
+.section-heading {
+  font-size: 36px;
+}
+
+.section {
+  display: flex;
+  flex-direction: row;
+  margin: 60px 0;
+  position: relative;
+}
+.section .col {
+  height: max-content;
+  margin: auto;
+  padding: 10px;
+}
+.section .content-col {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+.section .content-row {
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+}
+.section img {
+  width: 450px;
+}
+
+.header {
+  background: url("../../img/hero-bg1.jpg") repeat 0;
+  background-position: center center;
+  background-size: cover;
+  height: 100vh;
+}
+.header .nav {
+  justify-content: space-between;
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+}
+.header .nav i {
+  font-size: 24px;
+  color: #242424;
+}
+.header .nav i:hover {
+  cursor: pointer;
+  color: #3e3e3e;
+}
+.header .image-container {
+  height: fit-content;
+  position: relative;
+}
+.header .image-container .couvee-text {
+  position: relative;
+  margin: auto;
+}
+.header .image-container .couvee-text img {
+  width: 750px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 150px;
+  bottom: 0;
+  margin: auto;
+  z-index: 0;
+}
+.header .image-container .image-hands-container {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  max-width: 530px;
+  margin: auto;
+}
+.header .image-container .image-hands-container .left-hand {
+  position: absolute;
+  z-index: 2;
+}
+.header .image-container .image-hands-container .right-hand {
+  position: absolute;
+  z-index: 1;
+}/*# sourceMappingURL=header.css.map */

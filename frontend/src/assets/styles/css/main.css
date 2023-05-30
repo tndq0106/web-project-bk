@@ -1,0 +1,238 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  box-sizing: border-box;
+  vertical-align: baseline;
+  font-family: "M PLUS Rounded 1c", sans-serif;
+}
+
+h2 {
+  font-size: 24px;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+p {
+  font-family: "Nunito Sans", sans-serif;
+  font-weight: 300;
+  font-size: 18px;
+}
+
+a {
+  text-decoration: none;
+  color: #242424;
+}
+a:hover {
+  color: #d8d8d8;
+}
+
+.wrapper {
+  max-width: 1100px;
+  width: 100%;
+  margin: auto auto;
+  padding: 15px;
+  position: relative;
+}
+
+.section-heading {
+  font-size: 36px;
+}
+
+.section {
+  display: flex;
+  flex-direction: row;
+  margin: 60px 0;
+  position: relative;
+}
+.section .col {
+  height: max-content;
+  margin: auto;
+  padding: 10px;
+}
+.section .content-col {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+.section .content-row {
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+}
+.section img {
+  width: 450px;
+}
+
+.section-button-arrow-dark {
+  background-color: #c8a27a;
+  padding: 15px;
+  color: white;
+  border: 1px solid white;
+  width: max-content;
+  text-transform: uppercase;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  cursor: pointer;
+  transition: transform 0.3s;
+  gap: 25px;
+}
+.section-button-arrow-dark p {
+  font-size: 12px;
+  font-weight: 500;
+}
+.section-button-arrow-dark:hover {
+  transform: translate(0, -6px);
+}
+
+.section-button-arrow-light {
+  background-color: white;
+  padding: 15px;
+  color: #c8a27a;
+  border: 1px solid #c8a27a;
+  width: max-content;
+  text-transform: uppercase;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  cursor: pointer;
+  transition: transform 0.3s;
+  gap: 25px;
+}
+
+.section-button-center-dark {
+  background-color: #c8a27a;
+  padding: 16px 50px;
+  color: white;
+  border: 1px solid white;
+  width: max-content;
+  text-transform: uppercase;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  cursor: pointer;
+  transition: transform 0.3s;
+  text-align: center;
+  font-size: 12px;
+  font-weight: 500;
+}
+.section-button-center-dark:hover {
+  transform: translate(0, -6px);
+}
+
+.section-button-center-light {
+  background-color: white;
+  padding: 16px 50px;
+  color: #c8a27a;
+  border: 1px solid #c8a27a;
+  width: max-content;
+  text-transform: uppercase;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  cursor: pointer;
+  transition: transform 0.3s;
+  text-align: center;
+  font-size: 12px;
+  font-weight: 500;
+}
+.section-button-center-light:hover {
+  transform: translate(0, -6px);
+}
+
+.main {
+  z-index: 5;
+  position: relative;
+  background-color: white;
+  background-attachment: fixed;
+}
+.main .merchandise .row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  gap: 40px;
+}
+.main .merchandise .row .img-container img {
+  max-width: 320px;
+}
+.main .merchandise .row-button {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 20px;
+}
+.main .products .carousel-viewport .carousel-slide {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 40px;
+}
+.main .products .carousel-viewport .carousel-slide .product {
+  text-align: center;
+}
+.main .products .carousel-viewport .carousel-slide .product img {
+  width: 100%;
+}
+.main .products .carousel-viewport .carousel-slide .product .product-name {
+  text-transform: capitalize;
+}
+.main .products button {
+  margin: auto;
+}
+.main .promo {
+  width: 100%;
+  padding: 80px;
+  background-image: url("../../img/decoration-3.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.main .promo .wrapper {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+}
+.main .promo .promo-item {
+  background-color: white;
+  padding: 4px;
+  display: flex;
+  flex-direction: row;
+}
+.main .promo .promo-item .col {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.main .promo .promo-item .col img {
+  width: 100%;
+}
+.main .promo .promo-item .col .title {
+  font-size: 18px;
+  font-weight: 500;
+}
+.main .promo .promo-item .col .row {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  justify-content: space-between;
+}
+.main .promo .promo-item .col p, .main .promo .promo-item .col a {
+  color: #6d6d6d;
+  font-size: 14px;
+}
+.main .promo .promo-item .col a:hover {
+  color: black;
+}
+.main .instagram .wrapper {
+  margin: 0 auto;
+  text-align: center;
+}
+.main .instagram .wrapper img {
+  width: 48px;
+  margin: 0 0 10px;
+}
+.main .instagram .wrapper .section-heading {
+  font-size: 24px;
+  letter-spacing: 0.1em;
+}/*# sourceMappingURL=main.css.map */

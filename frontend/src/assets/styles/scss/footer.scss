@@ -1,0 +1,30 @@
+@use 'base';
+.footer{
+    background-image: url("../../img/footer-bg.png");
+    background-position-x: -100px;
+    .section{
+        justify-content: space-between;
+        .logo{
+            width:90px;
+            img{
+                width: 100%;
+            }
+        }
+        .content-col{
+            gap: 20px;
+        }
+    }
+    .wrapper{
+        border-top: 1px solid #ececec;
+    }
+}
+.colophon{
+    .wrapper{
+        @include base.flex(row);
+        justify-content: space-between;
+        color: white;
+        font-size: 10px;
+        padding: 10px 0;
+    }
+    background-color: #c8a27a;
+}

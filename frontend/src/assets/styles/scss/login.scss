@@ -1,0 +1,55 @@
+@use 'base';
+@use 'variables';
+
+body{
+    background: url('../../img/hero-bg1.jpg') repeat 0;
+    background-position: center center;
+    background-size: cover;
+    height: 100vh;
+    @include base.flex(column);
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    p{
+        font-size: small;
+    }
+}
+
+.form-box{
+    @include base.flex(column);
+    align-items: center;
+    height: max-content;
+    max-width: 500px;
+    padding: 40px;
+    margin: auto;
+    vertical-align: middle;
+    gap: 20px;
+    background-color: rgba(255,255,255,0.5);
+}
+form{
+    @include base.flex(column);
+    gap: 16px;
+    p{
+        font-size: small;
+    }
+    .container{
+        @include base.flex(row);
+        gap: 10px;
+    }
+    .field{
+        @include base.flex(column);
+        align-items: baseline;
+        gap: 8px;
+        input{
+            width: 100%;
+            padding: 5px;
+        }
+    }
+    input[type=submit]{
+        @include base.button(white, variables.$accent, 10px 165px);
+        text-align: center;
+        width: 100%;
+        text-transform: capitalize;
+        font-weight: 500;
+    }
+}

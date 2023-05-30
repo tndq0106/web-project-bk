@@ -1,0 +1,77 @@
+body {
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+}
+
+.user-details {
+  margin-top: 20px;
+}
+
+.user-details form {
+  display: grid;
+  grid-gap: 10px;
+}
+
+.user-details label {
+  font-weight: bold;
+}
+
+.user-details input[type="text"],
+.user-details input[type="email"],
+.user-details input[type="tel"],
+.user-details textarea {
+  width: 100%;
+  padding: 5px;
+  font-size: 16px;
+}
+
+.user-details button[type="submit"] {
+  display: block;
+  margin: 10px 0;
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  height: 48px;
+}
+
+.cart-summary {
+  margin-top: 20px;
+  padding: 10px;
+  border: 1px solid #ccc;
+}
+
+#total-amount {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.cart-item-name {
+  font-weight: bold;
+}
+
+.cart-item-price {
+  color: #888;
+}
+
+form .field {
+  width: unset;
+}

@@ -1,0 +1,55 @@
+@use 'base';
+.header{
+    background: url('../../img/hero-bg1.jpg') repeat 0;
+    background-position: center center;
+    background-size: cover;
+    height: 100vh;
+    .nav{
+        justify-content: space-between;
+        align-items: center;
+        // position: fixed;
+        // width: 1100px;
+        // z-index: 100;
+        @include base.flex(row);
+        i{
+            font-size: 24px;
+            color: #242424;
+            &:hover{
+                cursor: pointer;
+                color:  lighten(#242424,10%);
+            }
+        } 
+    }
+    .image-container{
+        height:fit-content;
+        position: relative;
+        .couvee-text{
+            position: relative;
+            margin: auto;
+            img{
+                width: 750px;
+                position: absolute;
+                left: 0;
+                right: 0;
+                top: 150px;
+                bottom: 0;
+                margin: auto;
+                z-index: 0;
+            }
+        }
+        .image-hands-container{
+            @include base.flex(row);
+            position: relative;
+            max-width: 530px;
+            margin: auto;
+            .left-hand{
+                position: absolute;
+                z-index: 2;
+            }
+            .right-hand{
+                position: absolute;
+                z-index: 1;
+            }
+        }
+    }
+}

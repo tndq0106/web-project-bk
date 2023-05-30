@@ -1,0 +1,82 @@
+@mixin flex($direction){
+    display: flex;
+    flex-direction: $direction;
+}
+
+@mixin button($color, $background, $padding){
+    background-color: $background;
+    padding: $padding;
+    color: $color;
+    border: 1px solid $color;
+    width: max-content;
+    text-transform: uppercase;
+    @include flex(row);
+    align-items: center;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+    vertical-align: baseline;
+    font-family: 'M PLUS Rounded 1c', sans-serif; 
+}
+    h2{
+        font-size: 24px;
+        font-weight: 400;
+        text-transform: uppercase;
+    }
+    p{
+        font-family: 'Nunito Sans', sans-serif;
+        font-weight: 300;
+        font-size: 18px;
+    }
+    a{
+        text-decoration: none;
+        color: #242424;
+        &:hover{
+            color: lighten(#242424,10%);
+        }
+    }
+    
+    .wrapper{
+        max-width: 1100px;
+        width: 100%;
+        margin: auto auto;
+        padding: 15px;
+        position: relative;
+    }
+
+    .section-heading{
+        font-size: 36px;
+    }
+    .section{
+        @include flex(row);
+        margin: 60px 0;
+        position: relative;
+        .col{
+            height: max-content;
+            margin: auto;
+            padding: 10px;
+        }
+        .content-col{
+            @include flex(column);
+            gap: 40px;
+        }
+        .content-row{
+            @include flex(row);
+            gap: 40px;
+        }
+        img{
+            width: 450px;
+        }
+    }
+
+
+
+
+
+
