@@ -54,6 +54,7 @@
 .burger {
   width: 20px;
   height: 20px;
+  cursor: pointer;
 }
 
 .shopping {
@@ -115,8 +116,7 @@
 }
 
 .card .checkOut div {
-  border-style: solid;
-  border-width: 0.5px;
+  border: 0.5px solid #5e5e5e;
   background-color: #c8a27a;
   width: 100%;
   height: 70px;
@@ -273,14 +273,23 @@
 }
 
 .content-body-item-product {
-  border: 1px solid black;
+  /* border: 1px solid black; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.product-item {
+  width: 330px;
+  height: 330px;
   /* align-self: center; */
 }
 
 .product-item-title {
   color: #242424;
   font-weight: bold;
-  line-height: 1.875;
+  line-height: 1;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
@@ -291,6 +300,7 @@
 
 .product-item-content {
   text-align: center;
+  line-height: 0.7;
 }
 
 #searchbar {
